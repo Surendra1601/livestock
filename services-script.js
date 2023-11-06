@@ -18,10 +18,10 @@ function predictHealth() {
     };
 
     // Check body temperature
-    if (temperatureCelsius < 35 || temperatureCelsius > 41.7) {
+    if (temperatureCelsius < 5 || temperatureCelsius > 51.7) {
         healthStatus.temperature = "Extreme";
         healthStatus.overall = "Dangerous";
-    } else if (temperatureCelsius < 37.5 || temperatureCelsius > 40.6) {
+    } else if (temperatureCelsius < 10 || temperatureCelsius > 45.6) {
         healthStatus.temperature = "Dangerous";
         healthStatus.overall = "Dangerous";
     }
@@ -70,7 +70,7 @@ function analyzeEnvironment() {
         environmentStatus.temperature = "Extreme Danger";
         environmentStatus.humidity = "Extreme Danger";
         environmentStatus.overall = "Extreme Danger";
-    } else if (temperatureCelsius >= 43 && temperatureCelsius <= 20 && humidity >= 60 && humidity <= 10) {
+    } else if (temperatureCelsius >= 43 && temperatureCelsius <= 10 && humidity >= 60 && humidity <= 10) {
         environmentStatus.temperature = "Dangerous";
         environmentStatus.humidity = "Dangerous";
         environmentStatus.overall = "Dangerous";
