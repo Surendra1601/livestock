@@ -66,15 +66,15 @@ function analyzeEnvironment() {
     };
 
     // Check temperature and humidity
-    if (temperatureCelsius > 32 && humidity > 70) {
+    if (temperatureCelsius > 48 && humidity > 70) {
         environmentStatus.temperature = "Extreme Danger";
         environmentStatus.humidity = "Extreme Danger";
         environmentStatus.overall = "Extreme Danger";
-    } else if (temperatureCelsius >= 26 && temperatureCelsius <= 32 && humidity >= 60 && humidity <= 70) {
+    } else if (temperatureCelsius >= 43 && temperatureCelsius <= 20 && humidity >= 60 && humidity <= 10) {
         environmentStatus.temperature = "Dangerous";
         environmentStatus.humidity = "Dangerous";
         environmentStatus.overall = "Dangerous";
-    } else if (temperatureCelsius < 13 || humidity < 55) {
+    } else if (temperatureCelsius < 13 || humidity < 5) {
         environmentStatus.temperature = "Dangerous";
         environmentStatus.humidity = "Dangerous";
         environmentStatus.overall = "Dangerous";
